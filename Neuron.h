@@ -4,6 +4,9 @@
 
 #ifndef UNTITLED_NEURON_H
 #define UNTITLED_NEURON_H
+#include <iostream>
+#include <thread>
+#include <future>
 
 
 class Neuron {
@@ -13,6 +16,7 @@ public:
     int getId();
     int setId(const int newId);
     int calculate();
+    static void calculateT(Neuron *obj);
 private:
     int _id;
 };

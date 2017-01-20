@@ -24,3 +24,11 @@ int Neuron::calculate() {
     //cout << "leaving thread " << std::this_thread::get_id() << endl;
 //    g_lock.unlock();
 }
+void Neuron::calculateT( Neuron *obj){
+    std::cout << "Thread calculation " << obj->calculate() << std::endl;
+
+    // auto t1 = std::async(obj->calculate);
+    //auto res = t1.get();
+    //std::thread thr5(this->calculate());
+    //thr5.join();
+}
