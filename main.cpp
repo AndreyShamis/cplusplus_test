@@ -33,7 +33,7 @@ int main() {
     Neuron n1(1);
     Network *net;
     net = new Network();
-    net->set_networkName("My NN network");
+    net->set_networkName("Сеть My NN network");
     cout << "Neuron id is " << n->get_id() << endl;
     try{
         cout<< "Netowrk name:[" << net->get_networkName() << "]." << endl;
