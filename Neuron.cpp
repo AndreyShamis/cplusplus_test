@@ -4,14 +4,39 @@
 
 #include "Neuron.h"
 
-Neuron::Neuron(const int id){
-    setId(id);
+/**
+ * Constructor
+ * @param id
+ */
+Neuron::Neuron(const unsigned int id){
+    set_id(id);
 }
-int Neuron::getId(){
-   return _id ;
+
+/**
+ *
+ * @param level
+ * @param number
+ */
+Neuron::Neuron(const unsigned int level, const unsigned int number) {
+    this->set_level(level);
+    this->set_number(number);
 }
-int Neuron::setId(const int newId){
-    _id = newId;
+
+/**
+ *
+ * @return
+ */
+unsigned int Neuron::get_id() const{
+   return this->_id ;
+}
+
+/**
+ *
+ * @param newId
+ * @return
+ */
+unsigned int Neuron::set_id(const unsigned int newId){
+    this->_id = newId;
 }
 int Neuron::calculate() {
 //    g_lock.lock();
@@ -32,3 +57,43 @@ void Neuron::calculateT( Neuron *obj){
     //std::thread thr5(this->calculate());
     //thr5.join();
 }
+
+/**
+ *
+ * @param newLevel
+ */
+void Neuron::set_level(const unsigned int newLevel) {
+    if (newLevel >= 0){
+        this->_level = newLevel;
+    }
+    else{
+        std::cout << "Cannot set negative level for Neutron" << std::endl;
+    }
+
+}
+
+/**
+ *
+ * @return
+ */
+unsigned int Neuron::get_level() const {
+    return this->_level;
+}
+
+/**
+ *
+ * @return
+ */
+unsigned int Neuron::get_number() const {
+    return this->_number;
+}
+
+/**
+ *
+ * @param newNumber
+ */
+void Neuron::set_number(const unsigned int newNumber) {
+    this->_number = newNumber;
+}
+
+

@@ -84,10 +84,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/werd/CLionProjects/cplusplus_test/Network.cpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/home/werd/CLionProjects/cplusplus_test/Network.h">
+			<Option target="untitled"/>
+		</Unit>
 		<Unit filename="/home/werd/CLionProjects/cplusplus_test/Neuron.cpp">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/home/werd/CLionProjects/cplusplus_test/Neuron.h">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/home/werd/CLionProjects/cplusplus_test/Weight.cpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/home/werd/CLionProjects/cplusplus_test/Weight.h">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/home/werd/CLionProjects/cplusplus_test/main.cpp">

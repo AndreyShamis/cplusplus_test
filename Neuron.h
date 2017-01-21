@@ -8,17 +8,28 @@
 #include <thread>
 #include <future>
 
+#include "Weight.h"
 
 class Neuron {
 
 public:
-    Neuron(const int id);
-    int getId();
-    int setId(const int newId);
+    Neuron(const unsigned int id);
+    Neuron(const unsigned int level,const unsigned int number);
+    unsigned int get_id() const;
+    unsigned int set_id(const unsigned int newId);
     int calculate();
     static void calculateT(Neuron *obj);
+    unsigned int get_level() const;
+    void set_level(const unsigned int newLevel);
+    unsigned int get_number() const;
+    void set_number(const unsigned int _number);
 private:
-    int _id;
+    unsigned int _id;
+    unsigned int _level;
+    unsigned int _number;
+    Weight<float>  _weights;
+public:
+
 };
 
 

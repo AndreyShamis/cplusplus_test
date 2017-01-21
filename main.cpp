@@ -3,6 +3,7 @@
 #include <mutex>
 #include <future>
 #include "Neuron.h"
+#include "Network.h"
 
 using std::cin;
 using std::cout;
@@ -30,9 +31,12 @@ int main() {
     Neuron *n;
     n = new Neuron(1);
     Neuron n1(1);
-
-    cout << "Neuron id is " << n->getId() << endl;
+    Network *net;
+    net = new Network();
+    net->set_networkName("My NN network");
+    cout << "Neuron id is " << n->get_id() << endl;
     try{
+        cout<< "Netowrk name:[" << net->get_networkName() << "]." << endl;
         std::thread thr1(threadFunction, 100000000, 1, "example");
         std::thread thr2(threadFunction, 100000000, 2, "example");
         std::thread thr3(threadFunction, 100000000, 3, "example");
@@ -47,10 +51,10 @@ int main() {
         t1.join();
 
         //t1.detach();
-        n->setId(2);
+        n->set_id(2);
   //      cout << "Neuron id is " << n->getId() << "Thread result is " << res << endl;
-        n->setId(3);
-        cout << "Neuron id is " << n->getId() << endl;
+        n->set_id(3);
+        cout << "Neuron id is " << n->get_id() << endl;
         thr1.join();
         thr2.join();
         thr3.join();
@@ -62,7 +66,7 @@ int main() {
         cout << "Error :" <<  ex.what() << endl;
     }
 
-    n->setId(4);
-    cout << "Neuron id is " << n->getId() << endl;
+    n->set_id(4);
+    cout << "Neuron id is " << n->get_id() << endl;
     return 0;
 }
